@@ -18,7 +18,7 @@ public class _01_BinarySearch {
 		if(end >=start) {
 			int mid = Math.round((start+end)/2);
 			if(array[mid] == value) {
-				return array[mid];
+				return mid;
 			}
 			if(array[mid]>value) {
 				return binarySearch(array, start, mid-1, value);

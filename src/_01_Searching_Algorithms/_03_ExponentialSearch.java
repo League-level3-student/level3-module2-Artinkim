@@ -10,9 +10,23 @@ public class _03_ExponentialSearch {
 	//   We can assume that array is sorted.
 	public static int exponentialSearch(int array[], int value)
 	{
+		if(array[0] == value) {
+			return 0;
+		}
+		int counter = 1;
+		while(counter<array.length && array[counter]<=value) {
+			counter = counter*2;
+		}
+		int minimum;
+		if(counter<array.length) {
+			minimum = counter;
+		} else {
+			minimum = array.length-1;
+		}
+		return _01_BinarySearch.binarySearch(array, counter/2, minimum, value);
 		// 2. Check if the array element at 0 is the value.
 		//    If it is, then return 0.
-
+		
 		// 3. create an integer called counter and initialize it to 1;
 		
 		//4. make while loop that checks for two conditions:
@@ -35,6 +49,5 @@ public class _03_ExponentialSearch {
 		//		the value to be found
 		
 		//10. return the result
-		return 0;
 	}
 }
