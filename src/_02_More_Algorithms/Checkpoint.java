@@ -7,8 +7,9 @@ public class Checkpoint {
 		for (int i = 0; i < l.length; i++) {
 			System.out.println(l[i]);
 		}
-		int[] l2 = 
-		Checkpoint.find(arr, x) 
+		int[] l2 = {4,7,3,9,92,53,1};
+		System.out.println(Checkpoint.find(l2, 1));
+		System.out.println(Checkpoint.find(l2, 2));
 	}
 
 	public static Double[] sort(Double[] list) {
